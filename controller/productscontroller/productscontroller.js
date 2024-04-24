@@ -61,8 +61,7 @@ exports.productscontroller = async(req,res)=>{
  exports.createproductsdetail=async(req,res)=>{
     const data =req.body
     const{title,brand,price,image_url,rating,description,total_reviews,availability,style,product_Id,}=data;
-    
-     const newproduct= await Prisma.productdetail.create({
+const newproduct= await Prisma.productdetail.create({
        data:{
           title,
           brand,
